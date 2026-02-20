@@ -1,17 +1,8 @@
 name: Lints
 on: [push, pull_request]
 jobs:
-  lint:
+  prek:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: pipx install poetry
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          cache: poetry
-      - run: poetry install --with dev --no-interaction
-      - run: poetry run ruff format .
-      - run: poetry run ruff check .
-      - run: poetry run safety check --ignore 70612
-      - run: poetry run poetry check
+      - uses: actions/checkout@v6
+      - uses: j178/prek-action@v1

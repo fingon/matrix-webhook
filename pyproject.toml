@@ -1,39 +1,30 @@
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0"]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0"]
 
-[tool.poetry]
-authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
+[project]
+authors = [{email = "guilhem.saurel@laas.fr", name = "Guilhem Saurel"}]
+dependencies = [
+  "Markdown>=3.6",
+  "matrix-nio>=0.25"
+]
 description = "Post a message to a matrix room with a simple HTTP POST"
-homepage = "https://github.com/nim65s/matrix-webhook"
-license = "BSD-2-Clause"
+license = {text = "BSD-2-Clause"}
 name = "matrix-webhook"
 readme = "README.md"
-repository = "https://github.com/nim65s/matrix-webhook.git"
+requires-python = ">=3.13"
 version = "3.9.1"
 
-[tool.poetry.dependencies]
-Markdown = "^3.6"
-matrix-nio = "^0.25"
-python = "^3.8"
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-coverage = "^7.6.1"
-httpx = ">=0.27.2"
-ruff = ">=0.6.4"
-safety = {allow-prereleases = true, version = "^3.2.7"}
-
-[tool.poetry.scripts]
+[project.scripts]
 matrix-webhook = "matrix_webhook.__main__:main"
 
-[tool.poetry.urls]
-"changelog" = "https://github.com/nim65s/matrix-webhook/blob/master/CHANGELOG.md"
+[project.urls]
+Homepage = "https://github.com/fingon/matrix-webhook"
+Repository = "https://github.com/fingon/matrix-webhook.git"
+changelog = "https://github.com/fingon/matrix-webhook/blob/master/CHANGELOG.md"
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py313"
 
 [tool.ruff.lint]
 extend-ignore = ["D203", "D213"]

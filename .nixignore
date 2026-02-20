@@ -1,8 +1,0 @@
-*.nix
-.git*
-.nixignore
-.pre-commit-config.yaml
-Dockerfile
-docker-compose.yml
-CHANGELOG.md
-LICENSE
