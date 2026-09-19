@@ -1,4 +1,4 @@
-Note: This is fork for my personal use as upstream seems bit abandoned. If you want to use it, fine, but don't blame me for problems.
+Note: This is fork for my personal use as upstream seems bit abandoned. If you want to use it, fine, but don't blame me for problems. My fork has been archived in favor of my [Go minimalist implementation](https://github.com/fingon/go-matrix-webhook).
 
 # Matrix Webhook
 
